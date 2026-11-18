@@ -87,28 +87,23 @@ def run_baseline_on_part(
 
 
 def print_benchmark_table(results: dict[str, Any]) -> None:
-    """Afiseaza tabelul formatat cu rezultatele de baseline."""
-    print("\n" + "=" * 82)
-    print(f"  BENCHMARK NAIV / BASELINE CROWD COUNTING (Evaluat pe Test Set)")
-    print("=" * 82)
+    """Afiseaza tabelul cu rezultatele de baseline."""
+    print("\nRezultate baseline pe test set:")
+    print("-" * 75)
 
     for part_name, res in results.items():
-        print(f"\n--> {part_name.upper()} ({res['test_samples']} imagini de test)")
-        print(f"    Train Stats: Mean = {res['train_stats']['mean']:.1f} | Median = {res['train_stats']['median']:.1f} | Min = {res['train_stats']['min']:.0f} | Max = {res['train_stats']['max']:.0f}")
-        print(f"    Test Stats:  Mean = {res['test_stats']['mean']:.1f} | Median = {res['test_stats']['median']:.1f} | Min = {res['test_stats']['min']:.0f} | Max = {res['test_stats']['max']:.0f}")
-        print("-" * 82)
-        print(f"  {'Strategie':<22} | {'Val. Const.':<12} | {'MAE':<10} | {'RMSE':<10} | {'NAE':<10}")
-        print("-" * 82)
+        print(f"\n{part_name.upper()} ({res['test_samples']} imagini test):")
+        print(f"  Train: medie = {res['train_stats']['mean']:.1f}, mediana = {res['train_stats']['median']:.1f}")
+        print(f"  Test:  medie = {res['test_stats']['mean']:.1f}, mediana = {res['test_stats']['median']:.1f}")
+        print("-" * 75)
+        print(f"  {'Metoda':<20} | {'Valoare':<10} | {'MAE':<10} | {'RMSE':<10} | {'NAE':<10}")
+        print("-" * 75)
         for strat, data in res["baselines"].items():
             print(
-                f"  {strat:<22} | {data['predicted_constant']:<12.1f} | "
+                f"  {strat:<20} | {data['predicted_constant']:<10.1f} | "
                 f"{data['mae']:<10.2f} | {data['rmse']:<10.2f} | {data['nae']:<10.4f}"
             )
-        print("-" * 82)
-
-    print("\n[INFO] Modelele de Deep Learning (ex: CSRNet in Sprint 2) trebuie sa depaseasca semnificativ")
-    print("       aceste valori MAE/RMSE de referinta.")
-    print("=" * 82 + "\n")
+        print("-" * 75)
 
 
 def main() -> None:
