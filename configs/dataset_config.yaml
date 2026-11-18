@@ -1,0 +1,39 @@
+project:
+  name: "CrowdCounting"
+  seed: 42
+
+paths:
+  raw_root: "ShanghaiTech"
+  processed_root: "data/processed"
+
+dataset:
+  parts:
+    part_A:
+      description: "Scene aglomerate, rezolutii variate"
+      density_method: "adaptive"
+      knn_k: 3
+      beta: 0.3
+      sigma_min: 1.5
+      sigma_max: 25.0
+      fallback_sigma: 15.0
+    part_B:
+      description: "Scene stradale, rezolutie fixa 1024x768"
+      density_method: "fixed"
+      fixed_sigma: 15.0
+
+cleaning:
+  convert_grayscale_to_rgb: true
+  clip_out_of_bounds_points: true
+  drop_outside_margin_px: 10.0
+  deduplicate_radius_px: 0.5
+
+splits:
+  val_ratio: 0.15
+  stratify_bins: 5
+  seed: 42
+
+storage:
+  density_format: "h5"
+  h5_compression: "gzip"
+  h5_compression_opts: 4
+  dtype: "float32"

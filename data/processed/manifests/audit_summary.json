@@ -1,0 +1,141 @@
+{
+  "elapsed_seconds": 91.13,
+  "parts": {
+    "part_A": {
+      "part": "part_A",
+      "description": "Scene foarte aglomerate, rezolutii variate (imagini de pe internet)",
+      "density_method": "adaptive",
+      "total_pairs": 482,
+      "valid_samples": 482,
+      "invalid_samples": 0,
+      "orphans": {
+        "train_data": {
+          "orphan_images": 0,
+          "orphan_mats": 0
+        },
+        "test_data": {
+          "orphan_images": 0,
+          "orphan_mats": 0
+        }
+      },
+      "splits": {
+        "train": {
+          "count": 255,
+          "mean_people": 529.33,
+          "median_people": 380.0,
+          "min_people": 33,
+          "max_people": 3138
+        },
+        "val": {
+          "count": 45,
+          "mean_people": 608.04,
+          "median_people": 350.0,
+          "min_people": 43,
+          "max_people": 2650
+        },
+        "test": {
+          "count": 182,
+          "mean_people": 432.96,
+          "median_people": 307.5,
+          "min_people": 66,
+          "max_people": 2256
+        }
+      },
+      "cleaning_totals": {
+        "converted_to_rgb": 20,
+        "count_mismatches": 0,
+        "nan_or_inf_dropped": 0,
+        "far_oob_dropped": 0,
+        "border_oob_clipped": 71,
+        "duplicates_dropped": 135
+      },
+      "crowd_stats": {
+        "total_people_annotations": 241140,
+        "min_people": 33,
+        "mean_people": 500.29,
+        "median_people": 359.0,
+        "std_people": 456.63,
+        "max_people": 3138
+      },
+      "resolution_stats": {
+        "unique_resolutions": 293,
+        "min_width": 293,
+        "max_width": 1024,
+        "min_height": 182,
+        "max_height": 1024
+      },
+      "density_verification": {
+        "max_abs_count_error": 0.000122,
+        "mean_abs_count_error": 5.3900414937759335e-06
+      }
+    },
+    "part_B": {
+      "part": "part_B",
+      "description": "Scene stradale mai putin dense, rezolutie fixa 1024x768",
+      "density_method": "fixed",
+      "total_pairs": 716,
+      "valid_samples": 716,
+      "invalid_samples": 0,
+      "orphans": {
+        "train_data": {
+          "orphan_images": 0,
+          "orphan_mats": 0
+        },
+        "test_data": {
+          "orphan_images": 0,
+          "orphan_mats": 0
+        }
+      },
+      "splits": {
+        "train": {
+          "count": 340,
+          "mean_people": 122.56,
+          "median_people": 96.5,
+          "min_people": 12,
+          "max_people": 576
+        },
+        "val": {
+          "count": 60,
+          "mean_people": 124.02,
+          "median_people": 107.5,
+          "min_people": 12,
+          "max_people": 378
+        },
+        "test": {
+          "count": 316,
+          "mean_people": 123.7,
+          "median_people": 93.0,
+          "min_people": 9,
+          "max_people": 539
+        }
+      },
+      "cleaning_totals": {
+        "converted_to_rgb": 0,
+        "count_mismatches": 0,
+        "nan_or_inf_dropped": 0,
+        "far_oob_dropped": 0,
+        "border_oob_clipped": 56,
+        "duplicates_dropped": 74
+      },
+      "crowd_stats": {
+        "total_people_annotations": 88198,
+        "min_people": 9,
+        "mean_people": 123.18,
+        "median_people": 95.5,
+        "std_people": 94.35,
+        "max_people": 576
+      },
+      "resolution_stats": {
+        "unique_resolutions": 1,
+        "min_width": 1024,
+        "max_width": 1024,
+        "min_height": 768,
+        "max_height": 768
+      },
+      "density_verification": {
+        "max_abs_count_error": 6.1e-05,
+        "mean_abs_count_error": 2.9930167597765364e-06
+      }
+    }
+  }
+}

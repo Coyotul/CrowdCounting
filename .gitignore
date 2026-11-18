@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+
+# Raw datasets & heavy generated artifacts (too large for git)
+ShanghaiTech/
+shanghaitech_h5_empty/
+data/raw/
+data/processed/part_A/
+data/processed/part_B/
+*.h5
+*.hdf5
+*.npy
+*.npz
+
+# Model checkpoints & weights
+checkpoints/
+weights/
+*.pth
+*.pt
+*.onnx
+*.ckpt
+
+# Jupyter / Colab
+.ipynb_checkpoints/
+
+# OS & Editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
